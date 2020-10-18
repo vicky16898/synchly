@@ -21,7 +21,7 @@
         "postinstall": "node scripts/postinstall.js",
         "postuninstall": "node scripts/postuninstall.js",
         "fmt": "prettier --print-width 120 --no-bracket-spacing --single-quote --tab-width 4 --write scripts src",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "node ./node_modules/mocha/bin/mocha"
     },
     "pre-commit": [
         "fmt"
@@ -71,6 +71,8 @@
         "ssh2-sftp-client": "^5.1.2"
     },
     "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^8.2.0",
         "pre-commit": "^1.2.2",
         "prettier": "^2.0.5"
     }
